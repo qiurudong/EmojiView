@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/chatting_footer"
+android:layout_width="fill_parent"
+android:layout_height="wrap_content"
+android:background="#ebecee"
+android:gravity="center_horizontal"
+android:orientation="vertical" >
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:gravity="center"
+    android:id="@+id/chatting_voice_record_layout"
+    android:orientation="horizontal">
+
+    <EditText
+        android:id="@+id/chatting_emoji_check_ed"
+        android:layout_width="match_parent"
+        android:layout_height="43dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="53dp"
+        android:layout_marginRight="53dp"/>
+
+
+    <ImageView
+        android:id="@+id/chatting_emoji_check_iv"
+        android:layout_width="33dp"
+        android:layout_height="33dp"
+        android:layout_gravity="right|center_vertical"
+        android:src="@mipmap/bm_chatting_emoji_icon_close"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+    </ImageView>
+</FrameLayout>
+
+<app.stevenqiu.emojiview.emoji.EmojiView
+    android:layout_width="match_parent"
+    android:layout_height="250dp"
+    android:id="@+id/chatting_emoji_ev"
+    android:visibility="gone"
+    />
+
+</LinearLayout>

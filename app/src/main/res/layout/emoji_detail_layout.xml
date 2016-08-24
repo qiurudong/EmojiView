@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    >
+
+    <FrameLayout
+        android:layout_width="@dimen/EmotionDetailViewModelWidth"
+        android:layout_height="@dimen/EmotionDetailViewModelHeight"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:orientation="vertical"
+        android:id="@+id/emoji_detail_ll"
+        >
+
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="120dp"
+        android:padding="10dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal|top"
+        android:id="@+id/emoji_detail_gif"
+        android:background="@drawable/bm_emoji_detail_bg"
+        />
+    <LinearLayout
+        android:id="@+id/triangle_ll"
+        android:layout_width="70dp"
+        android:layout_height="15dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="3dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        >
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:src="@mipmap/emoji_detail_triangle"/>
+    </LinearLayout>
+    </FrameLayout>
+</RelativeLayout>

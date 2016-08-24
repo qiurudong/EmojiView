@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bm_emoji_modle_check_color"
+    android:orientation="vertical">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/emoji_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="185dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+       >
+    </android.support.v4.view.ViewPager>
+
+    <LinearLayout
+        android:id="@+id/emoji_indicator_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_below="@+id/emoji_viewPager"
+        android:layout_above="@+id/emoji_model_hsv"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <app.stevenqiu.emojiview.emoji.ViewFlipperIndicator
+            android:id="@+id/emoji_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="8dp"
+            android:layout_gravity="bottom|center_horizontal"
+            />
+    </LinearLayout>
+
+
+
+    <HorizontalScrollView
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:id="@+id/emoji_model_hsv"
+        android:background="@android:color/white"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <GridView
+                android:id="@+id/emoji_model_gv"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:fadingEdge="none"
+                android:listSelector="@android:color/transparent"
+                android:numColumns="auto_fit"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                android:stretchMode="spacingWidthUniform" >
+            </GridView>
+        </LinearLayout>
+    </HorizontalScrollView>
+</RelativeLayout>
